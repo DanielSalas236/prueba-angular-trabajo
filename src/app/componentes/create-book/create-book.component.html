@@ -1,0 +1,89 @@
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <h2 style="color: #a1bdc9;">Crear Libro</h2>
+            <br>
+            <form class="row" [formGroup]="createBookForm" (submit)="crear()">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="nombre" class="color-purple">
+                                    Nombre
+                                </label>
+                                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                                <div *ngIf="nombre.invalid">
+                                    <div *ngIf="nombre.errors.required" class="text-danger">
+                                        <small>Este campo es requerido</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="autor" class="color-purple">
+                                    Autor
+                                </label>
+                                <input type="text" class="form-control" id="autor" formControlName="autor">
+                                <div *ngIf="autor.invalid">
+                                    <div *ngIf="autor.errors.required" class="text-danger">
+                                        <small>Este campo es requerido</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="fecha" class="color-purple">
+                                    Fecha
+                                </label><br>
+                                <!-- <input type="text" class="form-control" > -->
+                                <dp-date-picker theme="dp-material" placeholder="dd/mm/yyyy" id="fecha"
+                                    formControlName="fecha">
+                                </dp-date-picker>
+                                <div *ngIf="fecha.invalid">
+                                    <div *ngIf="fecha.errors.required" class="text-danger">
+                                        <small>Este campo es requerido</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="valor" class="color-purple">
+                                    Valor
+                                </label>
+                                <input type="number" class="form-control" id="valor" formControlName="valor">
+                                <div *ngIf="valor.invalid">
+                                    <div *ngIf="valor.errors.required" class="text-danger">
+                                        <small>Este campo es requerido</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="estado" formControlName="estado">
+                            <label class="form-check-label text-secondary" for="flexSwitchCheckDefault"><b>Disponible</b></label>
+                        </div>
+                        <div *ngIf="estado.invalid">
+                            <div *ngIf="estado.errors.required" class="text-danger">
+                                <small>Este campo es requerido</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <button type="submit" class="btn btn-purple btn-submit-form">
+                            Guardar
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row full-height">
+        <div class="col-sm-4">
+            <div class="left-sidebar">
+                <app-sidebar></app-sidebar>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <!-- Para navegar entre componentes -->
+            <ng-template [ngIf]="route == '/workspace/createBook'">
+                <app-create-book></app-create-book>
+            </ng-template>
+            <ng-template [ngIf]="route == '/workspace/listBooks'">
+                <app-list-books></app-list-books>
+            </ng-template>
+        </div>
+    </div>
+</div>

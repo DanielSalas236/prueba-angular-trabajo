@@ -1,0 +1,22 @@
+<div class="container"><br>
+    <div class="row">
+        <div class="col-8">
+            <div *ngFor="let libro of listaLibros">
+                <div class="container card-purple">
+                        <div class="row">
+                            <div class="col-10">
+                                <h5 class="color-purple">{{libro.name}}</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>x</h5>
+                            </div>
+                        </div>
+                        <p class="card-title">Autor: {{libro.author}}</p>
+                        <p class="card-text">Fecha publicación: {{libro.publicationDate | date}}</p>
+                        <p class="card-text">Disponible: {{libro.available}}</p>
+                        <p class="card-text">Precio: ${{libro.price}}</p>        
+                </div><br>
+            </div>
+        </div>
+    </div>
+</div>

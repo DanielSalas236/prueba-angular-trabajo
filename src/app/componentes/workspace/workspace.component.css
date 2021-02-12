@@ -1,0 +1,12 @@
+.left-sidebar {
+  max-width: 220px;
+  /* width: 100%; */
+  min-height: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 25%;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
